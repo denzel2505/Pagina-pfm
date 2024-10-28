@@ -1,0 +1,84 @@
+:root {
+    --sidebar-width: 260px;
+}
+
+body {
+    padding-top: 0;
+    position: relative;
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #202225;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    z-index: 1050;
+    color: white;
+}
+
+.sidebar-header {
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.nav-link {
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.trial-notice {
+    background-color: #ffcc00;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.choose-plan-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    margin-top: auto;
+}
+
+.bottom-nav .nav-link {
+    color: white;
+}
+
+footer {
+    background-color: #202225;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}

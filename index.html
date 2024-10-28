@@ -4,80 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">  
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">  
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> 
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png"> 
     <meta name="theme-color" content="#ffffff">    
     <title>PFM</title>
-    <style>
-        body {
-            padding-top: 56px; /* Espacio para el navbar fijo */
-            position: relative;
-            min-height: 100vh;
-        }
-        
-        /* Estilos para el contenedor de partículas */
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-color: #a0a3e5; /* Fondo oscuro para mejor contraste */
-        }
-        
-        .navbar {
-            z-index: 1000;
-            background-color: #ffffff !important; /* Navbar semi-transparente */
-        }
-        
-        .container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .card {
-            transition: transform 0.2s;
-            background-color: rgb(255, 255, 255);
-            backdrop-filter: blur(5px);
-        }
-        
-        .card:hover {
-            transform: scale(1.05);
-        }
-        
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .text-center {
-            color: rgb(0, 0, 0);
-                }
-        
-        footer {
-            width: 100%;
-            background-color: rgb(248, 249, 250);
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            z-index: 1;
-            backdrop-filter: blur(5px);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
-    <!-- El div de partículas va primero en el DOM -->
-    <div id="particles-js"></div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h6 class="mb-0">Elkinmb3's Organization</h6>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar w-100" placeholder="Ask or search">
+        </div>
+        
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="bi bi-house-door me-2"></i>Home</a>
+            <a class="nav-link" href="#"><i class="bi bi-file-text me-2"></i>Docs sites</a>
+            <a class="nav-link" href="#"><i class="bi bi-gear me-2"></i>Integrations</a>
+        </nav>
+        
+        <div class="section-title">Docs sites</div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="bi bi-folder me-2"></i>PFM</a>
+            <a class="nav-link" href="#"><i class="bi bi-folder me-2"></i>PFM</a>
+        </nav>
+        
+        <div class="section-title">Spaces</div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="bi bi-folder me-2"></i>PFM</a>
+            <a class="nav-link" href="#"><i class="bi bi-robot me-2"></i>BILL BOT</a>
+        </nav>
+        
+        <div class="trial-notice">
+            <p class="text-white mb-2">Your trial ends in 7 days.</p>
+            <p class="text-white-50 small mb-2">Choose a plan today to keep all the features you've tested out.</p>
+            <button class="choose-plan-btn">Choose plan</button>
+        </div>
+        
+        <div class="bottom-nav">
+            <nav class="nav flex-column">
+                <a class="nav-link" href="#"><i class="bi bi-people me-2"></i>Invite your team</a>
+                <a class="nav-link" href="#"><i class="bi bi-gear me-2"></i>Settings</a>
+                <a class="nav-link" href="#"><i class="bi bi-trash me-2"></i>Trash</a>
+                <a class="nav-link" href="#"><i class="bi bi-question-circle me-2"></i>Help</a>
+            </nav>
+        </div>
+    </div>
 
+    <!-- Main Content -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/Pagina/img/logo.png" alt="Logo" style="width: 70px; height: auto;">
+                <img src="img/logo.png" alt="Logo" style="width: 70px; height: auto;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -167,7 +153,7 @@
                             <h5 class="card-title">Proceso 6</h5>
                             <p class="card-text">Descripción breve del proceso 6.</p>
                             <a href="#link6" class="card-link">Ir al Proceso 6</a>
-                        </div>        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,121 +171,10 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS({
-            "particles": {
-                "number": {
-                    "value": 160,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "star",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 1,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 4,
-                        "size_min": 0.3,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": false,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 1,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 600
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "bubble"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 250,
-                        "size": 0,
-                        "duration": 2,
-                        "opacity": 0,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 400,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>
