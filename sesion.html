@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">  
+
+    <title>Inicio De Sesion</title>
+    <link rel="stylesheet" href="./css/sesion.css" >
+</head>
+<body>
+    <!-- Sidebar mejorado -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <a href="#">
+            <img src="img/android-chrome-512x512.png" alt="Logo" style="width: 45px; height: auto;">
+        </a>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Ask or search">
+    </div>
+    
+    <nav class="nav flex-column">
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-house-door me-2"></i>
+            <span class="ml-2">Home</span>
+        </a>
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-file-text me-2"></i>
+            <span class="ml-2">Docs sites</span>
+        </a>
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-gear me-2"></i>
+            <span class="ml-2">Integrations</span>
+        </a>
+    </nav>
+    
+    <div class="section-title">Docs sites</div>
+    <nav class="nav flex-column">
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-folder me-2"></i>
+            <span class="ml-2">PFM</span>
+        </a>
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-folder me-2"></i>
+            <span class="ml-2">PFM</span>
+        </a>
+    </nav>
+    
+    <div class="section-title">Spaces</div>
+    <nav class="nav flex-column">
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-folder me-2"></i>
+            <span class="ml-2">PFM</span>
+        </a>
+        <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-robot me-2"></i>
+            <span class="ml-2">BILL BOT</span>
+        </a>
+    </nav>
+    
+    <div class="trial-notice">
+        <p class="mb-2">Your trial ends in 7 days.</p>
+        <p class="text-white-50 small mb-2">Choose a plan today to keep all the features you've tested out.</p>
+        <button class="choose-plan-btn">Choose plan</button>
+    </div>
+    
+    <div class="bottom-nav">
+        <nav class="nav flex-column">
+            <a class="nav-link d-flex align-items-center" href="#">
+                <i class="bi bi-people me-2"></i>
+                <span class="ml-2">Invite your team</span>
+            </a>
+            <a class="nav-link d-flex align-items-center" href="#">
+                <i class="bi bi-gear me-2"></i>
+                <span class="ml-2">Settings</span>
+            </a>
+            <a class="nav-link d-flex align-items-center" href="#">
+                <i class="bi bi-trash me-2"></i>
+                <span class="ml-2">Trash</span>
+            </a>
+            <a class="nav-link d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle me-2"></i>
+                <span class="ml-2">Help</span>
+            </a>
+        </nav>
+    </div>
+</div>
+
+    <!-- sidebar -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <button id="toggleSidebar" class="btn btn-light d-flex align-items-center">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand ml-3" href="#">
+                <img src="img/logo.png" alt="Logo" style="width: 70px; height: auto;">
+            </a>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="/conexion/registro.php" method="POST">
+                <h1>Crea Tu Cuenta</h1>
+                <input type="text" placeholder="Name" name="nombre" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="contraseña" required>
+                <button type="submit" class="botones">Registrate</button>
+                <span class="espacio">Ingresa tambien con</span>
+                <div class="social-icons">
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,5c-10.49341,0 -19,8.50659 -19,19c0,10.49341 8.50659,19 19,19c10.49341,0 19,-8.50659 19,-19c0,-10.49341 -8.50659,-19 -19,-19z" fill="#1485bc"></path><path d="M26.572,29.036h4.917l0.772,-4.995h-5.69v-2.73c0,-2.075 0.678,-3.915 2.619,-3.915h3.119v-4.359c-0.548,-0.074 -1.707,-0.236 -3.897,-0.236c-4.573,0 -7.254,2.415 -7.254,7.917v3.323h-4.701v4.995h4.701v13.729c0.931,0.14 1.874,0.235 2.842,0.235c0.875,0 1.729,-0.08 2.572,-0.194z" fill="#ffffff"></path></g></g>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 46.792969 22.089844 L 27.910156 3.207031 C 27.109375 2.402344 26.054688 2 25 2 C 23.945313 2 22.890625 2.402344 22.089844 3.207031 L 18.355469 6.941406 L 22.976563 11.5625 C 24.511719 10.660156 26.511719 10.855469 27.828125 12.171875 C 29.144531 13.488281 29.335938 15.488281 28.433594 17.019531 L 32.976563 21.5625 C 34.511719 20.660156 36.511719 20.855469 37.828125 22.171875 C 39.390625 23.734375 39.390625 26.265625 37.828125 27.828125 C 36.265625 29.390625 33.734375 29.390625 32.171875 27.828125 C 30.855469 26.511719 30.660156 24.511719 31.5625 22.976563 L 27.019531 18.433594 C 26.695313 18.625 26.355469 18.765625 26 18.855469 L 26 31.140625 C 27.722656 31.585938 29 33.136719 29 35 C 29 37.210938 27.210938 39 25 39 C 22.789063 39 21 37.210938 21 35 C 21 33.136719 22.277344 31.585938 24 31.140625 L 24 18.855469 C 23.332031 18.683594 22.695313 18.351563 22.171875 17.828125 C 20.855469 16.511719 20.664063 14.511719 21.566406 12.980469 L 16.941406 8.355469 L 3.207031 22.089844 C 1.597656 23.695313 1.597656 26.304688 3.207031 27.910156 L 22.089844 46.792969 C 22.890625 47.597656 23.945313 48 25 48 C 26.054688 48 27.109375 47.597656 27.910156 46.792969 L 46.792969 27.910156 C 48.402344 26.304688 48.402344 23.695313 46.792969 22.089844 Z"></path>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <defs><linearGradient id="K7_evwOeO6UmBZr1zxGzda_YJfJ0JM5Imsj_gr1" x1="6" x2="22" y1="14" y2="14" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f44f5a"></stop><stop offset=".44" stop-color="#ee3d4a"></stop><stop offset="1" stop-color="#e52030"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdb_YJfJ0JM5Imsj_gr2" x1="56.6" x2="23.63" y1="14" y2="14" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#21ad64"></stop><stop offset="1" stop-color="#088242"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdc_YJfJ0JM5Imsj_gr3" x1="48.68" x2="20.72" y1="34" y2="34" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fede00"></stop><stop offset="1" stop-color="#ffd000"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdd_YJfJ0JM5Imsj_gr4" x1="6" x2="22" y1="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33bef0"></stop><stop offset="1" stop-color="#22a5e2"></stop></linearGradient></defs><path fill="url(#K7_evwOeO6UmBZr1zxGzda_YJfJ0JM5Imsj_gr1)" d="m22,22H6V6h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdb_YJfJ0JM5Imsj_gr2)" d="m42,22h-16V6h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdc_YJfJ0JM5Imsj_gr3)" d="m42,42h-16v-16h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdd_YJfJ0JM5Imsj_gr4)" d="m22,42H6v-16h16v16Z"></path>
+                        </svg></a>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in">
+            <form action="/conexion/login.php" method="POST" >
+                <h1>Inicia Sesión</h1>
+                <span></span>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="contraseña" required>
+                <a href="#">Olvidaste Tu Contraseña?</a>
+                <button type="submit">Iniciar</button>
+                <div class="social-icons">
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,5c-10.49341,0 -19,8.50659 -19,19c0,10.49341 8.50659,19 19,19c10.49341,0 19,-8.50659 19,-19c0,-10.49341 -8.50659,-19 -19,-19z" fill="#1485bc"></path><path d="M26.572,29.036h4.917l0.772,-4.995h-5.69v-2.73c0,-2.075 0.678,-3.915 2.619,-3.915h3.119v-4.359c-0.548,-0.074 -1.707,-0.236 -3.897,-0.236c-4.573,0 -7.254,2.415 -7.254,7.917v3.323h-4.701v4.995h4.701v13.729c0.931,0.14 1.874,0.235 2.842,0.235c0.875,0 1.729,-0.08 2.572,-0.194z" fill="#ffffff"></path></g></g>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 46.792969 22.089844 L 27.910156 3.207031 C 27.109375 2.402344 26.054688 2 25 2 C 23.945313 2 22.890625 2.402344 22.089844 3.207031 L 18.355469 6.941406 L 22.976563 11.5625 C 24.511719 10.660156 26.511719 10.855469 27.828125 12.171875 C 29.144531 13.488281 29.335938 15.488281 28.433594 17.019531 L 32.976563 21.5625 C 34.511719 20.660156 36.511719 20.855469 37.828125 22.171875 C 39.390625 23.734375 39.390625 26.265625 37.828125 27.828125 C 36.265625 29.390625 33.734375 29.390625 32.171875 27.828125 C 30.855469 26.511719 30.660156 24.511719 31.5625 22.976563 L 27.019531 18.433594 C 26.695313 18.625 26.355469 18.765625 26 18.855469 L 26 31.140625 C 27.722656 31.585938 29 33.136719 29 35 C 29 37.210938 27.210938 39 25 39 C 22.789063 39 21 37.210938 21 35 C 21 33.136719 22.277344 31.585938 24 31.140625 L 24 18.855469 C 23.332031 18.683594 22.695313 18.351563 22.171875 17.828125 C 20.855469 16.511719 20.664063 14.511719 21.566406 12.980469 L 16.941406 8.355469 L 3.207031 22.089844 C 1.597656 23.695313 1.597656 26.304688 3.207031 27.910156 L 22.089844 46.792969 C 22.890625 47.597656 23.945313 48 25 48 C 26.054688 48 27.109375 47.597656 27.910156 46.792969 L 46.792969 27.910156 C 48.402344 26.304688 48.402344 23.695313 46.792969 22.089844 Z"></path>
+                        </svg></a>
+                    <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <defs><linearGradient id="K7_evwOeO6UmBZr1zxGzda_YJfJ0JM5Imsj_gr1" x1="6" x2="22" y1="14" y2="14" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 16" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f44f5a"></stop><stop offset=".44" stop-color="#ee3d4a"></stop><stop offset="1" stop-color="#e52030"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdb_YJfJ0JM5Imsj_gr2" x1="56.6" x2="23.63" y1="14" y2="14" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#21ad64"></stop><stop offset="1" stop-color="#088242"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdc_YJfJ0JM5Imsj_gr3" x1="48.68" x2="20.72" y1="34" y2="34" data-name="ÐÐµÐ·ÑÐ¼ÑÐ½Ð½ÑÐ¹ Ð³ÑÐ°Ð´Ð¸ÐµÐ½Ñ 11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fede00"></stop><stop offset="1" stop-color="#ffd000"></stop></linearGradient><linearGradient id="K7_evwOeO6UmBZr1zxGzdd_YJfJ0JM5Imsj_gr4" x1="6" x2="22" y1="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#33bef0"></stop><stop offset="1" stop-color="#22a5e2"></stop></linearGradient></defs><path fill="url(#K7_evwOeO6UmBZr1zxGzda_YJfJ0JM5Imsj_gr1)" d="m22,22H6V6h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdb_YJfJ0JM5Imsj_gr2)" d="m42,22h-16V6h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdc_YJfJ0JM5Imsj_gr3)" d="m42,42h-16v-16h16v16Z"></path><path fill="url(#K7_evwOeO6UmBZr1zxGzdd_YJfJ0JM5Imsj_gr4)" d="m22,42H6v-16h16v16Z"></path>
+                        </svg></a>
+                </div>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido de Vuelta!</h1>
+                    <p>Ingrese sus datos para utilizar todas nuestras funciones</p>
+                    <button class="hidden" id="login">Iniciar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Junta Tus Favoritos En PFM!</h1>
+                    <p>Tu Portafolio Flotante Multiplataforma
+                    Avanzamos constantemente para ofrecerte mas servicios!</p>
+                    <button class="hidden" id="register">Registrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/sidebar.js"></script>
+
+</body>
+</html>

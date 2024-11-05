@@ -1,0 +1,409 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --sidebar-width: 260px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Contenedor principal */
+body.sidebar-active {
+    margin-left: var(--sidebar-width);
+}
+
+/* Estilos del sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #202225;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    z-index: 1040;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Navbar ajustes */
+.navbar {
+    transition: margin-left 0.3s ease;
+    z-index: 1041;
+}
+
+body.sidebar-active .navbar {
+    margin-left: var(--sidebar-width);
+}
+
+
+
+/* Componentes del sidebar */
+.sidebar-header {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.search-container {
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2f3136;
+    color: white;
+}
+
+.nav-link {
+    color: #dcddde !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.2rem;
+    transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white !important;
+}
+
+.section-title {
+    margin: 1.5rem 0 0.5rem 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+.trial-notice {
+    background-color: #2f3136;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.choose-plan-btn {
+    width: 100%;
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.choose-plan-btn:hover {
+    background-color: #4752c4;
+}
+
+.bottom-nav {
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    body.sidebar-active {
+        overflow: hidden;
+    }
+    
+    .navbar {
+        width: 100%;
+    }
+}
+
+.container{
+    background-image: url("/imagenes/image\ \(1\).png");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+    background-color: #000000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: transparent; /* Hacer el fondo transparente */
+    /* background-color: #2e1d57; */
+    height: 100%;
+    /* background: linear-gradient(to right, #000000, #000000); */
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    /* background-image: url("/Pagina/imagenes/image\ \(1\).png"); */
+    background-repeat: no-repeat;
+    background-position: left;
+    /* background-size: ; */
+    transform: translateX(0);
+}
+
+.toggle-right {
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 0;
+    transform: translateX(0);
+}
+
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+span.espacio{
+    padding-top: 5%;
+}
+/* Estilos básicos para la navbar */
+.navbar {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que la navbar esté siempre visible sobre el contenido */
+}
+
+/* Logo de la navbar */
+.logo img {
+    width: 40px; /* Tamaño del logo */
+    height: 40px;
+}
+
+/* Links de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Espacio entre los elementos del menú */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Color de los links */
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+/* Efecto hover para los links de navegación */
+.nav-links a:hover {
+    color: #ff9900; /* Cambia a color naranja cuando se pasa el mouse */
+    transition-duration: 0.5s;
+}
+
+.user-icon {
+    margin-right: 2%;
+    margin-left: 7%;
+}
+
+/* Icono de usuario */
+.user-icon img {
+    width: 35px; /* Tamaño del icono de usuario */
+    height: 35px;
+    border-radius: 100%; /* Hace que el icono sea redondo */
+}
+
+/* Contenedor del logo para empujar los enlaces hacia la derecha */
+.logo {
+    margin-right: auto;
+}

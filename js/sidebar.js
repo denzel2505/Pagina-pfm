@@ -1,39 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('toggleSidebar');
-    const sidebar = document.getElementById('sidebar');
     const body = document.body;
-
-    toggleButton.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.getElementById('toggleSidebar');
+    
+    // Asegurarse de que el sidebar comience cerrado
+    body.classList.remove('sidebar-active');
+    sidebar.classList.remove('active');
+    
+    // Manejar el toggle del sidebar
+    toggleButton.addEventListener('click', function() {
         body.classList.toggle('sidebar-active');
+        sidebar.classList.toggle('active');
+        
+        // Opcional: Guardar el estado en localStorage para mantener la preferencia del usuario
+        localStorage.setItem('sidebarOpen', body.classList.contains('sidebar-active'));
     });
-
-    // Cerrar sidebar al hacer clic fuera en dispositivos móviles
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 991.98) {
-            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
-                if (sidebar.classList.contains('active')) {
-                    sidebar.classList.remove('active');
-                    body.classList.remove('sidebar-active');
-                }
-            }
-        }
-    });
-
-    // Ajustar en cambio de tamaño de ventana
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 991.98) {
-            sidebar.classList.add('active');
-            body.classList.add('sidebar-active');
-        } else {
-            sidebar.classList.remove('active');
+    
+    // Opcional: Cerrar el sidebar en dispositivos móviles cuando se hace clic fuera
+    document.addEventListener('click', function(event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnToggleButton = toggleButton.contains(event.target);
+        
+        if (!isClickInsideSidebar && !isClickOnToggleButton && window.innerWidth < 992) {
             body.classList.remove('sidebar-active');
+            sidebar.classList.remove('active');
         }
     });
-
-    // Establecer estado inicial
-    if (window.innerWidth > 991.98) {
-        sidebar.classList.add('active');
-        body.classList.add('sidebar-active');
-    }
 });
