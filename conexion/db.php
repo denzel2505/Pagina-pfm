@@ -1,16 +1,17 @@
 <?php
-$host = "localhost"; // Cambia esto si tu base de datos está en otro servidor
-$user = "root"; // Tu usuario de MySQL
-$password = ""; // La contraseña de tu usuario
-$dbname = "elkinmb3"; // El nombre de tu base de datos
+$config = include('config.php');
 
-// Crear la conexión
-$conn = new mysqli($host, $user, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}else{
-    echo "Conexión exitosa";
+try {
+    $conn = new PDO(
+        "mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8",
+        $config['user'],
+        $config['password']
+    );
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    error_log("Error en la conexión: " . $e->getMessage());
+    die("Error en la conexión. Intente más tarde.");
 }
 ?>

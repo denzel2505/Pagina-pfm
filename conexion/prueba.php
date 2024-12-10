@@ -2,15 +2,15 @@
 include 'db.php'; // Asegúrate de que db.php contiene la conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'] ?? '';
-    $contraseña = $_POST['contraseña'] ?? '';
+    $email = $_POST['email'];
+    $contraseña = $_POST['contraseña'];
 
     // Usar sentencia preparada para evitar inyección SQL
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = :email");
-    
-    // Vincular el parámetro con bindParam()
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
 
+    // Vincular el parámetro con bindParam() en lugar de bind_param()
+    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    
     // Ejecutar la consulta
     $stmt->execute();
     

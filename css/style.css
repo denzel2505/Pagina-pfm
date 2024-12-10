@@ -1,0 +1,152 @@
+:root{
+    --verde: #00A149;
+    --blanco:#FFF;
+    --rojo: #881014;
+    --oscuro: #0c1022c4;
+    --amarillo: yellow;
+    --azul: blue;
+    --titulos: 'Arima Madurai',cursive;
+    --parrafos: 'Mulish', sans-serif;
+}
+html{
+  box-sizing: content-box;
+  font-size: 62.5% 
+}
+body{
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+*,*::after, *::before{
+  box-sizing: inherit;
+}
+
+.contenedor{
+  max-width: 12rem;
+  margin: 0 auto;
+  width: 95%;
+}
+h1, h2 {
+  font-family: var(--blanco);
+  font-family: sans-serif ;
+}
+.t-oscuro{
+  color: var(--blanco)
+}
+.t-azul{
+  color: var(--azul)
+}
+.t-rojo{
+  color: var(--rojo)
+}
+/*encabezado*/
+.contenedor-navegacion{
+  background-color: var(--oscuro);
+  position: relative;
+  z-index:5;
+}
+.contenido-navegacion{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--oscuro);
+  padding: 0 5%;
+}
+.logo h2 , .navegacion a {
+  color:var(--blanco)
+}
+.logo h2 , .navegacion a {
+  font-size: 3rem;
+}
+.navegacion a{
+  text-decoration: none;
+  font-size: 2.2rem;
+  padding: 1.5rem;
+  padding-left: 4rem;
+  display: block;
+  transition: color .3s ease-in-out;
+  text-align: center;
+}
+
+@media(min-width:768px){
+  .navegacion a{
+      text-align: left;
+  }
+}
+
+.navegacion a:nth-child(even):hover{
+  color: var(--rojo);
+}
+.navegacion a:nth-child(odd):hover{
+  color: var(--verde);
+}
+  .navegacion a:first-of-type{
+    margin-top: 5rem;
+  }
+.navegacion{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  height: 100vh;
+  width: 30rem;
+  padding:/*4%*/ 3rem rem;
+  background-color: var(--oscuro);
+  animation: desplazamiento .5s ease-in-out;
+}
+.ocultar{
+  display: none;
+}
+.btn-cerrar{
+  font-family: fantasy;
+  font-size: 3rem;
+  font-weight:bold;
+  color: var(--blanco);
+  position: absolute;
+  top:-10px;
+  right:40px;
+  user-select: none;
+}
+.pantalla-completa{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index:4;
+}
+@keyframes desplazamiento {
+  0% {
+    transform: translatex(100%);
+  }
+  100%{
+    transform: translatex(0);
+  }
+}
+.btn-cerrar:hover{
+  cursor: pointer;
+}
+.hamburguesa span{
+  background-color: var(--blanco);
+  display: block;
+  width: 4rem;
+  height: 0.5rem;
+  margin-bottom: .5rem;
+}
+.hamburguesa:hover{
+  cursor: pointer;
+}
+
+.logoapple{
+  margin: 5%;
+  height: 300px;
+  background-color: black;
+}
+
+
+
+
+
+
+
