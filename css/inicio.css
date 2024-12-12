@@ -1,9 +1,15 @@
 :root {
     --sidebar-width: 260px;
+    --color-pastel-azul: #99cbf5;
+    --color-pastel-rosa: #fbcbcc;
+    --color-pastel-verde: #aefdb1;
+    --color-pastel-lila: #1c1c1e;
+    --color-pastel-naranja: #ffccbc;
 }
 
 /* Contenedor principal */
 body {
+    /* background-color: var(--color-pastel-azul) !important; */
     margin: 0;
     padding-top: 56px; /* Altura del navbar */
     min-height: 100vh;
@@ -23,7 +29,7 @@ body {
 
 /* Ajuste para evitar que el contenido quede debajo de la navbar */
 body {
-    padding-top: 80px; /* Altura del navbar ajustada a 80px, dependiendo de tu diseño */
+    padding-top: 90px; /* Altura del navbar ajustada a 80px, dependiendo de tu diseño */
 }
 
 /* Navbar */
@@ -35,18 +41,19 @@ header {
 }
 
 #incluida {
-    background-color: #ffffff;
+    background-color: var(--color-pastel-lila) !important;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #202225;
+    background-color: var(--color-pastel-lila) !important;
     padding: 10px 0;
+    margin: 0;
 }
 
 nav a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 10px;
@@ -77,10 +84,10 @@ li {
     margin-bottom: 10px;
 }
 
-/* Estilos del sidebar */
+/* Estilos del sidebar cuando no esta activo*/ 
 .sidebar {
     width: var(--sidebar-width);
-    background-color: #202225;
+    background-color: var(--color-pastel-lila) !important;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -94,11 +101,13 @@ li {
 }
 
 .sidebar.active {
+    background-color: var(--color-pastel-lila) !important;
     transform: translateX(0); /* Sidebar visible cuando tiene la clase active */
 }
 
 /* Navbar ajustes */
 .navbar {
+    background-color: var(--color-pastel-lila) !important;
     transition: margin-left 0.3s ease;
     z-index: 1041;
 }
@@ -115,6 +124,7 @@ body.sidebar-active .navbar {
 }
 
 .search-container {
+    background-color: var(--color-pastel-lila) !important;
     margin-bottom: 1.5rem;
 }
 
@@ -123,7 +133,7 @@ body.sidebar-active .navbar {
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #333;
-    background-color: #2f3136;
+    background-color: #380e40;
     color: white;
 }
 
@@ -175,6 +185,15 @@ body.sidebar-active .navbar {
     margin-top: 2rem;
     border-top: 1px solid #333;
     padding-top: 1rem;
+}
+.btn {
+    color: white;
+    border:none;
+    background-color: var(--color-pastel-lila) !important;
+}
+.btn:hover{
+    color: #d37ff1 !important;
+    border: 2px solid black;
 }
 
 /* Footer Styles */
