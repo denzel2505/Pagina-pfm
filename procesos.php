@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header('Location: ../pagina/conexion/login.php');
+    exit();
+}else{
+  $userName = htmlspecialchars($_SESSION['user_name']);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -43,7 +54,7 @@
       </button>
       <button class="profile-btn">
         <img src="https://assets.codepen.io/3306515/IMG_2025.jpg" />
-        <span>Aybüke C.</span>
+        <span><?php echo $userName; ?></span>
       </button>
     </div>
     <button class="messages-btn">
