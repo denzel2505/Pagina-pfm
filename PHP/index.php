@@ -10,6 +10,7 @@
 
 $var1 = 'Jimena Ropain';
 $var = 'Karen Rodriguez';
+$var2 = 'Miguel Ramirez';
 
 echo "Hola, mundo <br>";
 echo "$var1, $var";
